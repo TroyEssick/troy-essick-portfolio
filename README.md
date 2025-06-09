@@ -9,7 +9,7 @@
 ---
 
 ## 🔹 About Me
-I'm a seasoned Customer Success and Project Manager with 20+ years of experience delivering measurable outcomes in cloud ERP, ServiceNow, and SaaS environments. My expertise lies in onboarding strategy, ERP migrations, agile governance, and building executive-level confidence through transparent delivery.
+I'm a seasoned Customer Success and Project Manager with 17+ years of experience delivering measurable outcomes in cloud ERP, ServiceNow, and SaaS environments. My expertise lies in onboarding strategy, ERP migrations, agile governance, and building executive-level confidence through transparent delivery.
 
 ---
 
