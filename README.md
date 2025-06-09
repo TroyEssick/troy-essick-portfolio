@@ -3,7 +3,8 @@
 ![Certifications](./assets/logos_banner.png)
 
 **Location:** Clearwater, FL  
-**Certifications:** PMP | Oracle Cloud | Infor CloudSuite | ServiceNow
+**Certifications:** PMP - Project Management Institute
+**Technology:**| Oracle Fusion | Infor CloudSuite | ServiceNow
 
 ---
 
