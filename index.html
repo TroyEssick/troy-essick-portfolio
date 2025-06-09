@@ -1,37 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Troy Essick | SaaS & ERP Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0f172a;
+      color: #e2e8f0;
       line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
     }
+
+    header, footer, section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
     header {
       text-align: center;
+      background: linear-gradient(to right, #1e3a8a, #0f172a);
+      padding: 60px 20px;
+      border-bottom: 1px solid #334155;
     }
-    img.qr {
-      max-width: 120px;
-      display: block;
-      margin: 0 auto;
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #38bdf8;
     }
-    section {
-      margin-top: 40px;
+
+    h2 {
+      color: #7dd3fc;
+      font-size: 1.8rem;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 5px;
     }
-    h1, h2 {
-      color: #2c3e50;
+
+    h3 {
+      color: #60a5fa;
+      margin-top: 30px;
+      font-size: 1.4rem;
     }
+
     a {
-      color: #0066cc;
+      color: #38bdf8;
       text-decoration: none;
+      transition: color 0.2s ease;
     }
+
     a:hover {
+      color: #0ea5e9;
       text-decoration: underline;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+
+    ul li {
+      margin: 8px 0;
+    }
+
+    .qr {
+      max-width: 100px;
+      margin: 20px auto 0;
+      display: block;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      padding-bottom: 60px;
+      border-top: 1px solid #334155;
     }
   </style>
 </head>
@@ -39,29 +89,30 @@
   <header>
     <h1>Troy Essick</h1>
     <p>Cloud SaaS & ERP Leadership Portfolio | Clearwater, FL</p>
-    <p><strong>Certifications:</strong> PMP | Oracle Cloud | Infor CloudSuite | ServiceNow</p>
+    <p><strong>Certifications:</strong> PMP – Project Management Institute | Oracle Cloud | Infor CloudSuite | ServiceNow</p>
     <img src="./assets/linkedin_qr_troy_essick.png" alt="LinkedIn QR Code" class="qr">
   </header>
 
- <section id="about">
-  <h2>About Me</h2>
-  <p>
-    I’m Troy Essick, a Customer Success Manager and Program Leader with over <strong>17 years of experience</strong> helping organizations 
-    deliver results through cloud transformation, SaaS solutions, and ERP project delivery.
-  </p>
-  <p>
-    My background spans a range of roles across healthcare, logistics, education, and enterprise tech. I specialize in guiding customers 
-    through successful adoption of <strong>Cloud ERP (Oracle, Infor CloudSuite)</strong> and <strong>ServiceNow</strong> platforms — always with a 
-    focus on delivering measurable value, improving retention, and strengthening strategic relationships.
-  </p>
-  <p>
-    I’m currently focused on integrating <strong>AI-enhanced SaaS workflows</strong> into cloud environments to drive proactive insights, 
-    automation, and intelligent engagement at scale.
-  </p>
-</section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m Troy Essick, a Customer Success Manager and Program Leader with over <strong>17 years of experience</strong> helping organizations 
+      deliver results through cloud transformation, SaaS solutions, and ERP project delivery.
+    </p>
+    <p>
+      My background spans a range of roles across healthcare, logistics, education, and enterprise tech. I specialize in guiding customers 
+      through successful adoption of <strong>Cloud ERP (Oracle, Infor CloudSuite)</strong> and <strong>ServiceNow</strong> platforms — always with a 
+      focus on delivering measurable value, improving retention, and strengthening strategic relationships.
+    </p>
+    <p>
+      I’m currently focused on integrating <strong>AI-enhanced SaaS workflows</strong> into cloud environments to drive proactive insights, 
+      automation, and intelligent engagement at scale.
+    </p>
+  </section>
 
   <section>
     <h2>Portfolio Overview</h2>
+
     <h3>Customer Success Manager – Oracle Cloud ERP</h3>
     <ul>
       <li><a href="./oracle-csm/UOM_CSM_Summary.pdf">University of Maine System</a>: Multi-pillar onboarding using Oracle CS tools</li>
@@ -88,12 +139,12 @@
       <li><a href="./slide-deck/Troy_Essick_Portfolio_Slides.pdf">Master Slide Deck</a></li>
       <li><a href="./slide-deck/Troy_Essick_Portfolio_Full.pdf">Consolidated PDF</a></li>
       <li><a href="./notion-link.txt">Online Notion Version</a></li>
-      <li><a href="https://troyessick.github.io/troy-essick-portfolio/blob/main/README.md" target="_blank">About This Portfolio</a></li>
+      <li><a href="https://github.com/troyessick/troy-essick-portfolio/blob/main/README.md" target="_blank">About This Portfolio (GitHub)</a></li>
     </ul>
   </section>
 
   <footer>
-    <p style="margin-top: 60px; text-align: center; font-style: italic;">
+    <p>
       "Delivering enterprise outcomes starts with earning trust—then executing with clarity, agility, and accountability."
     </p>
   </footer>
