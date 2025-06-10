@@ -27,7 +27,7 @@
     }
     h1 {
       font-size: 2.8rem;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       color: #38bdf8;
     }
     h2 {
@@ -71,6 +71,48 @@
       border-radius: 50%;
       margin: 10px auto;
     }
+    .contact-info {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+    }
+    .contact-info a {
+      color: #7dd3fc;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    .contact-info a:hover {
+      color: #38bdf8;
+      text-decoration: underline;
+    }
+    .contact-info .icon {
+      width: 18px;
+      height: 18px;
+      margin-right: 5px;
+    }
+    .resume-button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .resume-btn {
+      background-color: #38bdf8;
+      color: #0f172a;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .resume-btn:hover {
+      background-color: #0ea5e9;
+      color: white;
+    }
     .thumbnail-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -104,12 +146,6 @@
       max-height: 90%;
       border-radius: 8px;
     }
-    .pdf-embed {
-      width: 100%;
-      height: 600px;
-      margin-top: 30px;
-      border: none;
-    }
     footer {
       text-align: center;
       font-style: italic;
@@ -124,24 +160,39 @@
   <header>
     <img src="./assets/profile_troy.jpg" alt="Profile" class="profile-pic">
     <h1>Troy Essick</h1>
-    <p>Cloud SaaS & ERP Leadership Portfolio | Clearwater, FL</p>
-    <p>PMP | Oracle Cloud | Infor CloudSuite | ServiceNow</p>
+    <p style="font-size: 1.1rem; color: #a5f3fc; margin-bottom: 10px;">Customer Success • Cloud SaaS • ERP Program Delivery</p>
+    <div class="contact-info">
+      <a href="mailto:troy325@hotmail.com">📧 troy325@hotmail.com</a>
+      <span>|</span>
+      <a href="tel:+13522062226">📱 352.206.2226</a>
+      <span>|</span>
+      <a href="https://www.linkedin.com/in/troy-essick/" target="_blank">
+        <img src="./assets/linkedin_icon.png" alt="LinkedIn" class="icon"> LinkedIn
+      </a>
+    </div>
     <img src="./assets/linkedin_qr_troy_essick.png" alt="LinkedIn QR Code" class="qr">
   </header>
 
+  <div class="resume-button-container">
+    <a href="./assets/Troy_Essick_Resume.pdf" download title="Download my résumé (PDF)" class="resume-btn">⬇ Download Résumé</a>
+  </div>
+
   <section>
     <h2>Portfolio Overview</h2>
+
     <h3>Customer Success Manager – Oracle Cloud ERP</h3>
     <ul>
       <li><a href="./oracle-csm/UOM_CSM_Summary.pdf">University of Maine System</a>: Multi-pillar onboarding using Oracle CS tools</li>
       <li><a href="./oracle-csm/GXO_CSM_Summary.pdf">GXO Logistics</a>: Logistics ERP rollout, 95% satisfaction</li>
     </ul>
+
     <h3>Technical Project Manager – Infor CloudSuite</h3>
     <ul>
       <li><a href="./infor-tpm/NYP_TPM_Summary.pdf">NewYork-Presbyterian</a>: SaaS go-live stabilization</li>
       <li><a href="./infor-tpm/HOAG_TPM_Summary.pdf">HOAG Hospital</a>: Midstream rescue and go-live</li>
       <li><a href="./infor-tpm/PeaceHealth_TPM_Summary.pdf">PeaceHealth</a>: ERP re-implementation success</li>
     </ul>
+
     <h3>Program Manager – ServiceNow (Infocenter)</h3>
     <ul>
       <li><a href="./servicenow-pm/Trialcard_PM_Summary.pdf">Trialcard (Pharma)</a>: GRC dashboards & compliance reporting</li>
@@ -159,32 +210,10 @@
     </div>
   </section>
 
-  
-
   <footer>
-    <p>
-      "Delivering enterprise outcomes starts with earning trust—then executing with clarity, agility, and accountability."
-    </p>
+    <p>"Delivering enterprise outcomes starts with earning trust—then executing with clarity, agility, and accountability."</p>
   </footer>
 
-  <section style="max-width: 900px; margin: auto; padding: 40px 20px;">
-    <h2>Contact Me</h2>
-    <form action="mailto:troy325@hotmail.com" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 15px;">
-      <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; border-radius: 6px; border: none;">
-      <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; border-radius: 6px; border: none;">
-      <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 10px; border-radius: 6px; border: none;"></textarea>
-      <button type="submit" style="padding: 12px; background-color: #38bdf8; color: #0f172a; font-weight: bold; border-radius: 8px; border: none; cursor: pointer;">
-        Send Message
-      </button>
-    </form>
-  </section>
-
-  <div class="resume-button-container" style="text-align: center; margin: 40px auto;">
-    <a href="./assets/Troy_Essick_Resume.pdf" download title="Download my résumé (PDF)" class="resume-btn">⬇ Download Résumé</a>
-    <a href="./assets/Troy_Essick_Resume.pdf" target="_blank" title="Open printable résumé in new tab" class="resume-btn" style="margin-left: 10px;">🖨️ Print Résumé</a>
-  </div>
-
-  <!-- Lightbox Modal -->
   <div class="lightbox" id="lightbox">
     <div style="text-align: center;">
       <img src="" id="lightbox-img" alt="Zoomed Preview">
