@@ -27,7 +27,7 @@
     }
     h1 {
       font-size: 2.8rem;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       color: #38bdf8;
     }
     h2 {
@@ -70,6 +70,30 @@
       object-fit: cover;
       border-radius: 50%;
       margin: 10px auto;
+    }
+    .contact-info {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+    }
+    .contact-info a {
+      color: #7dd3fc;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    .contact-info a:hover {
+      color: #38bdf8;
+      text-decoration: underline;
+    }
+    .contact-info .icon {
+      width: 18px;
+      height: 18px;
+      margin-right: 5px;
     }
     .thumbnail-grid {
       display: grid;
@@ -118,8 +142,18 @@
   <header>
     <img src="./assets/profile_troy.jpg" alt="Profile" class="profile-pic">
     <h1>Troy Essick</h1>
-    <p>Cloud SaaS & ERP Leadership Portfolio | Clearwater, FL</p>
-    <p>PMP | Oracle Cloud | Infor CloudSuite | ServiceNow</p>
+    <p style="font-size: 1.1rem; color: #a5f3fc; margin-bottom: 10px;">Customer Success • Cloud SaaS • ERP Program Delivery</p>
+
+    <div class="contact-info">
+      <a href="mailto:troy325@hotmail.com">📧 troy325@hotmail.com</a>
+      <span>|</span>
+      <a href="tel:+13522062226">📱 352.206.2226</a>
+      <span>|</span>
+      <a href="https://www.linkedin.com/in/troy-essick/" target="_blank">
+        <img src="./assets/linkedin_icon.png" alt="LinkedIn" class="icon"> LinkedIn
+      </a>
+    </div>
+
     <img src="./assets/linkedin_qr_troy_essick.png" alt="LinkedIn QR Code" class="qr">
   </header>
 
@@ -162,7 +196,6 @@
     </p>
   </footer>
 
-  <!-- Lightbox Modal -->
   <div class="lightbox" id="lightbox">
     <div style="text-align: center;">
       <img src="" id="lightbox-img" alt="Zoomed Preview">
