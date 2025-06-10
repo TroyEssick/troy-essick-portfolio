@@ -86,30 +86,29 @@
     .thumbnail-grid img:hover {
       transform: scale(1.05);
     }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .lightbox.open {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
     .pdf-embed {
       width: 100%;
       height: 600px;
       margin-top: 30px;
       border: none;
-    }
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-    }
-    .lightbox.open {
-      display: flex;
     }
     footer {
       text-align: center;
@@ -130,39 +129,19 @@
     <img src="./assets/linkedin_qr_troy_essick.png" alt="LinkedIn QR Code" class="qr">
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m Troy Essick, a Customer Success Manager and Program Leader with over <strong>17 years of experience</strong> helping organizations 
-      deliver results through cloud transformation, SaaS solutions, and ERP project delivery.
-    </p>
-    <p>
-      My background spans a range of roles across healthcare, logistics, education, and enterprise tech. I specialize in guiding customers 
-      through successful adoption of <strong>Cloud ERP (Oracle, Infor CloudSuite)</strong> and <strong>ServiceNow</strong> platforms — always with a 
-      focus on delivering measurable value, improving retention, and strengthening strategic relationships.
-    </p>
-    <p>
-      I’m currently focused on integrating <strong>AI-enhanced SaaS workflows</strong> into cloud environments to drive proactive insights, 
-      automation, and intelligent engagement at scale.
-    </p>
-  </section>
-
   <section>
     <h2>Portfolio Overview</h2>
-
     <h3>Customer Success Manager – Oracle Cloud ERP</h3>
     <ul>
       <li><a href="./oracle-csm/UOM_CSM_Summary.pdf">University of Maine System</a>: Multi-pillar onboarding using Oracle CS tools</li>
       <li><a href="./oracle-csm/GXO_CSM_Summary.pdf">GXO Logistics</a>: Logistics ERP rollout, 95% satisfaction</li>
     </ul>
-
     <h3>Technical Project Manager – Infor CloudSuite</h3>
     <ul>
       <li><a href="./infor-tpm/NYP_TPM_Summary.pdf">NewYork-Presbyterian</a>: SaaS go-live stabilization</li>
       <li><a href="./infor-tpm/HOAG_TPM_Summary.pdf">HOAG Hospital</a>: Midstream rescue and go-live</li>
       <li><a href="./infor-tpm/PeaceHealth_TPM_Summary.pdf">PeaceHealth</a>: ERP re-implementation success</li>
     </ul>
-
     <h3>Program Manager – ServiceNow (Infocenter)</h3>
     <ul>
       <li><a href="./servicenow-pm/Trialcard_PM_Summary.pdf">Trialcard (Pharma)</a>: GRC dashboards & compliance reporting</li>
@@ -170,13 +149,13 @@
     </ul>
 
     <div class="thumbnail-grid">
-      <img src="./thumbnails/thumb_Oracle_UOM_CSM.png" alt="UOM CSM">
-      <img src="./thumbnails/thumb_Oracle_GXO_CSM.png" alt="GXO CSM">
-      <img src="./thumbnails/thumb_Infor_NYP_TPM.png" alt="NYP TPM">
-      <img src="./thumbnails/thumb_Infor_Hoag_TPM_2.png" alt="HOAG TPM">
-      <img src="./thumbnails/thumb_Infor_PeaceHealth_TPM.png" alt="PeaceHealth TPM">
-      <img src="./thumbnails/thumb_InfoCenter_TrialCard_PM.png" alt="TrialCard PM">
-      <img src="./thumbnails/thumb_InfoCenter_PrimeTrucking_PM.png" alt="Prime Trucking PM">
+      <img src="./thumbnails/thumb_Oracle_UOM_CSM.png" alt="UOM CSM" data-full="./fullsize/Oracle_UOM_CSM.png" data-pdf="./oracle-csm/UOM_CSM_Summary.pdf">
+      <img src="./thumbnails/thumb_Oracle_GXO_CSM.png" alt="GXO CSM" data-full="./fullsize/Oracle_GXO_CSM.png" data-pdf="./oracle-csm/GXO_CSM_Summary.pdf">
+      <img src="./thumbnails/thumb_Infor_NYP_TPM.png" alt="NYP TPM" data-full="./fullsize/Infor_NYP_TPM.png" data-pdf="./infor-tpm/NYP_TPM_Summary.pdf">
+      <img src="./thumbnails/thumb_Infor_Hoag_TPM_2.png" alt="HOAG TPM" data-full="./fullsize/Infor_Hoag_TPM_2.png" data-pdf="./infor-tpm/HOAG_TPM_Summary.pdf">
+      <img src="./thumbnails/thumb_Infor_PeaceHealth_TPM.png" alt="PeaceHealth TPM" data-full="./fullsize/Infor_PeaceHealth_TPM.png" data-pdf="./infor-tpm/PeaceHealth_TPM_Summary.pdf">
+      <img src="./thumbnails/thumb_InfoCenter_TrialCard_PM.png" alt="TrialCard PM" data-full="./fullsize/InfoCenter_TrialCard_PM.png" data-pdf="./servicenow-pm/Trialcard_PM_Summary.pdf">
+      <img src="./thumbnails/thumb_InfoCenter_PrimeTrucking_PM.png" alt="Prime Trucking PM" data-full="./fullsize/InfoCenter_PrimeTrucking_PM.png" data-pdf="./servicenow-pm/Prime_PM_Summary.pdf">
     </div>
   </section>
 
@@ -198,25 +177,33 @@
 
   <!-- Lightbox Modal -->
   <div class="lightbox" id="lightbox">
-    <img src="" alt="Zoomed Image" id="lightbox-img">
+    <div style="text-align: center;">
+      <img src="" id="lightbox-img" alt="Zoomed Preview">
+      <p style="margin-top: 10px;">
+        <a href="#" target="_blank" id="lightbox-pdf" style="color:#38bdf8;">View Related PDF Summary</a>
+      </p>
+    </div>
   </div>
 
   <script>
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxPDF = document.getElementById('lightbox-pdf');
     const thumbnails = document.querySelectorAll('.thumbnail-grid img');
 
     thumbnails.forEach(img => {
       img.addEventListener('click', () => {
         lightbox.classList.add('open');
-        lightboxImg.src = img.src.replace('thumb_', ''); // assumes full-size images follow this rule
+        lightboxImg.src = img.dataset.full;
         lightboxImg.alt = img.alt;
+        lightboxPDF.href = img.dataset.pdf;
       });
     });
 
     lightbox.addEventListener('click', () => {
       lightbox.classList.remove('open');
       lightboxImg.src = '';
+      lightboxPDF.href = '#';
     });
   </script>
 </body>
