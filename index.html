@@ -88,7 +88,6 @@
     }
     .contact-info a:hover {
       color: #38bdf8;
-      text-decoration: underline;
     }
     .contact-info .icon {
       width: 18px;
@@ -154,6 +153,25 @@
       padding-bottom: 60px;
       border-top: 1px solid #334155;
     }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+    }
+    form button {
+      padding: 12px;
+      background-color: #38bdf8;
+      color: #0f172a;
+      font-weight: bold;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #0ea5e9;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -175,6 +193,7 @@
 
   <div class="resume-button-container">
     <a href="./assets/Troy_Essick_Resume.pdf" download title="Download my résumé (PDF)" class="resume-btn">⬇ Download Résumé</a>
+    <a href="./assets/Troy_Essick_Resume.pdf" target="_blank" title="Open printable résumé in new tab" class="resume-btn" style="margin-left: 10px;">🖨️ Print Résumé</a>
   </div>
 
   <section>
@@ -208,6 +227,16 @@
       <img src="./thumbnails/thumb_InfoCenter_TrialCard_PM.png" alt="TrialCard PM" data-full="./fullsize/InfoCenter_TrialCard_PM.png" data-pdf="./servicenow-pm/Trialcard_PM_Summary.pdf">
       <img src="./thumbnails/thumb_InfoCenter_PrimeTrucking_PM.png" alt="Prime Trucking PM" data-full="./fullsize/InfoCenter_PrimeTrucking_PM.png" data-pdf="./servicenow-pm/Prime_PM_Summary.pdf">
     </div>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <form action="mailto:troy325@hotmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
