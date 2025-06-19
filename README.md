@@ -12,6 +12,14 @@ I’m currently focused on leveraging **AI-driven SaaS enhancements** in the clo
 
 ---
 
+## 🧠 Current Focus Areas (2025)
+
+- **AI-Enhanced Customer Success Co-Pilot**: Designing a GPT-based assistant to automate onboarding, QBR prep, and customer health insights.
+- **ERP Implementation Case Studies**: Documenting high-impact rollouts across healthcare, logistics, and education.
+- **Career Transition Toolkit**: Resume, roadmap, and resources to support mid-career SaaS professionals entering AI-enhanced roles.
+
+---
+
 ## 💼 Areas of Expertise
 
 - Customer Success Management & QBR Execution  
@@ -62,4 +70,9 @@ This slide deck highlights real-world results across customer success, ERP proje
 
 ## 📌 Certifications
 
-- ✅ PMP – Project Management Institute  
+- ✅ PMP – Project Management Institute
+
+---
+
+> ⚙️ "The future of success is AI-assisted, data-driven, and deeply human." – Troy Essick
+
