@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sentiment-Based Health Scorer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #0f172a;
+    }
+    pre {
+      background-color: #e2e8f0;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      color: #334155;
+    }
+    a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<h1>❤️ Sentiment-Based Health Scorer – Prompt Template</h1>
+
+<h2>🎯 Purpose:</h2>
+
+<p>Analyze customer sentiment across CRM notes, support tickets, and call transcripts to calculate a risk score and health rating.</p>
+
+<hr />
+
+<h2>🧠 Input Example:</h2>
+
+<ul>
+<li><strong>Account Name:</strong> Zenith Medical  </li>
+<li><strong>CRM Notes:</strong> "Team has been frustrated with reporting delays. No update on data refresh."  </li>
+<li><strong>Support Tickets:</strong> 2 open, 1 escalation  </li>
+<li><strong>Transcript Summary:</strong> "We love the product but haven’t heard back about our dashboard bug. Considering alternatives."  </li>
+<li><strong>Recent Engagement:</strong> No CSM contact in 30+ days  </li>
+<li><strong>NPS:</strong> 6  </li>
+<li><strong>Usage Trends:</strong> Dropped 25% in last 45 days</li>
+</ul>
+
+<hr />
+
+<h2>🧾 Prompt</h2>
+
+<p>```
+Act as a Customer Success Health Analyst. Review the following customer sentiment data and return:</p>
+
+<ol>
+<li>A sentiment score (-5 = very negative, 0 = neutral, +5 = very positive)</li>
+<li>A risk rating: Low, Medium, High</li>
+<li>2–3 concise reasons to support the rating</li>
+<li>Recommended CSM actions</li>
+</ol>
+
+<p>Input:
+- CRM Notes: "Team has been frustrated with reporting delays. No update on data refresh."
+- Support Tickets: 2 open, 1 escalation
+- Transcript Summary: "We love the product but haven’t heard back about our dashboard bug. Considering alternatives."
+- Engagement: No CSM contact in 30+ days
+- NPS: 6
+- Usage Trends: Dropped 25% in last 45 days
+```</p>
+
+</body>
+</html>
